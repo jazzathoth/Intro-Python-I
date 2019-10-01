@@ -11,7 +11,11 @@ z = "I like turtles!"
 # Using the printf operator (%), print the following feeding in the values of x,
 # y, and z:
 # x is 10, y is 2.25, z is "I like turtles!"
+print(f'\nTen: %i, \nDecimal: %f, \nTurtle string: %s' % (x, y, z))
+# YOUR CODE HERE
 
 # Use the 'format' string method to print the same thing
-
+print('\nTen: {}, \nDecimal: {}, \nTurtle string: {}'.format(x, y, z))
 # Finally, print the same thing using an f-string
+
+print(f'\nTen: {x}, \nDecimal: {y}, \nTurtle string: {z}')

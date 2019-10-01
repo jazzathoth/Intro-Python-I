@@ -22,3 +22,17 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+cal = calendar.Calendar()
+
+if len(sys.argv) > 3:
+    print('Please run 14_cal.py <month> [<year>].')
+    print('If only one argument given, will assume month')
+elif len(sys.argv) == 3:
+    mo = int(sys.argv[1])
+    yr = int(sys.argv[2])
+    print(cal.monthdatescalendar(yr, mo))
+elif len(sys.argv) == 2:
+    mo = int(sys.argv[1])
+    print(cal.monthdatescalendar(datetime.now().year, mo))
+else:
+    print(cal.monthdatescalendar(datetime.now().year, datetime.now().month))
